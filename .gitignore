@@ -1,0 +1,25 @@
+# === 隱私預設（白名單）：預設 ignore 一切，只放行公開文件與範本 ===
+# 你填入的正式 persona 檔（persona_testament.json / episodes.txt / test_probes.md /
+# 真實 patches/*.md / journal/*.md）一律不會被 git 追蹤；
+# 連你日後新增的其他檔也預設擋住，除非明確加進下面白名單。
+
+# 1) 先全部 ignore
+*
+# 2) 保留目錄結構（才能往下放行子檔）
+!*/
+
+# 3) 放行：公開文件
+!.gitignore
+!README*.md
+!CLAUDE.md
+!AGENTS.md
+!LICENSE
+!docs/**
+!image/**
+
+# 4) 放行：範本（*.example.* 與 EXAMPLE_ 範例）
+!*.example.json
+!*.example.txt
+!*.example.md
+!patches/EXAMPLE_*.md
+!journal/EXAMPLE_*.md
