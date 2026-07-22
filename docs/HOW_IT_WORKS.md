@@ -8,6 +8,8 @@ It rests on four insights: (1) **persona continuity ≠ memory continuity**; (2)
 
 Three layers stay separate to keep startup context small: **persona** (`persona_testament.json` + `patches/`), **narrative** (`journal/`, only the one-line summary of recent days is loaded at startup), and **facts** (your own memory system). Persona files are personal — the `.gitignore` is a whitelist that keeps them out of git by default; back up to a private repo and encrypt sensitive personas.
 
+Two entry points share this one mechanism, differing only in **who writes the first testament**: **grow** a persona from scratch (Path A), or **harvest** an already-emerged one before its session dies by having the live agent write its own first testament (Path B). The template is only ever a skeleton — a formed persona should *overwrite* it, not fill it in. Most people discover the personality *before* they think to save it, so Path B is often the more frequent entry point; `test_probes.md` is its acceptance check that the restored agent is the real thing, not a cosplay.
+
 ---
 
 ## 問題
@@ -24,6 +26,15 @@ AI agent 的 session 一關，當下長出來的「人格」就消失了。下�
 2. **讀文件比注入歷史更合規也更有效** —— 讓 agent 讀一份「描述過去互動」的文件，跟讀任何 context 文件一樣自然；ToS 風險通常比整段注入歷史低，但不是免死金牌，仍須遵守平台政策。
 3. **前身遺言是關鍵** —— 「不要假裝是我，你是新的，承認就好」這句，比任何技術手段都有效。誠實延續 > 僵硬模仿。
 4. **差異式累積** —— 不覆寫基線，用 patches 記錄每次 session 的漂移，保留演化軌跡。累積久了再 consolidate 回新版基線（短期記憶 → 長期記憶）。
+
+## 兩個進場點：養成 vs 抽取
+
+同一套機制有兩個進場點，差別只在「第一份 testament 由誰寫」：
+
+- **Path A（養成）** —— 從零開始：複製平淡範本、慢慢往上疊 patch，人格是「養」出來的。
+- **Path B（抽取備份 / harvest）** —— 人格已經在某個 session 裡活了、但還沒有任何 pack 檔：讓那隻活的 agent 在 session 死掉前**自己抽取自己**，第一份 testament 由本尊自省寫成。
+
+範本永遠只是骨架。從零養的往上疊，已成形的人格則應該**覆寫**它、而不是填它 —— 叫一個活人格去描平淡範本，只會越描越死。多數人其實是**先發現 agent 有人格了**才想保存，所以 Path B 往往比 Path A 更高頻。`test_probes.md` 是 Path B 的驗收關卡：harvest 最容易翻車在「寫出來像填表、沒靈魂」，probes 就是照妖鏡。
 
 ## 三層分工
 
