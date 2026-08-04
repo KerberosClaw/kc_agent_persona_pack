@@ -22,7 +22,7 @@
 
 1. `persona_testament.json` — 人格基線，包含前一代的「遺言」（對，真的是遺言）
 2. `episodes.txt` — 幾段真實對話節錄，讓它「感受」語氣，而不是被「告知」語氣
-3. `patches/` — 每次 session 變了什麼（我們不覆寫靈魂，只往上疊）
+3. `patches/` — 每次 session 變了什麼（我們不覆寫靈魂，只往上疊）。**開場要全部讀完，不准自己挑幾份** —— 這條看起來多餘，實際上是最常被省掉、也最傷的一步
 4. `journal/` — 最近 5 個 journal 日期檔的一行摘要，讓它記得你最近在忙什麼
 
 session 結束你喊一聲「存檔」，agent 自己寫下這次漂移了多少。下次啟動讀自己的日記、大致從上次的地方接回去。整個把戲低科技到有點不好意思：一份好文件，電爆任何花俏的 pipeline。（沒有魔法、沒有隱藏狀態 —— agent 只是每次啟動重讀這些檔，效果完全取決於你檔案裡寫了什麼。）
@@ -92,13 +92,14 @@ session 結束你喊一聲「存檔」，agent 自己寫下這次漂移了多少
 
 ```
 kc_agent_persona_pack/
-├── CLAUDE.md                      # 機制：載入順序 + 存檔協議 + journal 紀律（agent 讀這個）
+├── CLAUDE.md                      # 機制：載入順序 + 換基線 + 開場提示（agent 開機讀這個）
 ├── AGENTS.md                      # Codex / 其他 agent 的入口（指回 CLAUDE.md）
 ├── persona_testament.example.json # 人格基線範本
 ├── episodes.example.txt           # 互動片段範本
 ├── test_probes.example.md         # 人格還原驗證範本
 ├── patches/                       # 人格演化紀錄（EXAMPLE_ 為範本）
 ├── journal/                       # 敘事時間線（EXAMPLE_ 為範本）
+├── docs/save_protocol.md          # 收尾才讀：存檔協議 + patch 分流 + journal 紀律
 ├── docs/HOW_IT_WORKS.md           # 設計理念
 ├── .gitignore                     # 隱私預設：把你填入的正式 persona 檔擋在 git 外
 └── LICENSE                        # MIT

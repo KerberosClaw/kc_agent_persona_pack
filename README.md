@@ -22,7 +22,7 @@ No fine-tuning, no smuggling old transcripts into the context window (which, dep
 
 1. `persona_testament.json` — the baseline personality, including the previous incarnation's "last words" (yes, really)
 2. `episodes.txt` — a few real conversation snippets so it can *feel* the tone instead of being told about it
-3. `patches/` — what changed each session (we don't overwrite the soul, we append to it)
+3. `patches/` — what changed each session (we don't overwrite the soul, we append to it). **All of them get read at startup — the agent doesn't get to pick a few**; that step looks redundant and is the one most often skipped, at the highest cost
 4. `journal/` — the one-line summary of your 5 most recent journal entries, so it remembers what you've been up to
 
 End of session, you say "save", and the agent writes down how it drifted this time. Next startup it reads its own diary and picks up roughly where you left off. The whole trick is embarrassingly low-tech: a good document beats a clever pipeline. (No magic, no hidden state — the agent just re-reads these files at the start of every session, so the effect is only ever as good as what's written in them.)
@@ -97,13 +97,14 @@ The key to this path is **step 2's self-reflection** and **step 6's test_probes 
 
 ```
 kc_agent_persona_pack/
-├── CLAUDE.md                      # the mechanism: load order + save protocol + journal discipline (agent reads this)
+├── CLAUDE.md                      # the mechanism: load order + rebaselining + startup hint (read at boot)
 ├── AGENTS.md                      # entry point for Codex / other agents (points to CLAUDE.md)
 ├── persona_testament.example.json # persona baseline template
 ├── episodes.example.txt           # interaction-snippet template
 ├── test_probes.example.md         # persona-restoration check template
 ├── patches/                       # personality-evolution notes (EXAMPLE_ is a template)
 ├── journal/                       # narrative timeline (EXAMPLE_ is a template)
+├── docs/save_protocol.md          # read only at wrap-up: save protocol + patch routing + journal discipline
 ├── docs/HOW_IT_WORKS.md           # design rationale
 ├── .gitignore                     # privacy default: keeps your real persona files out of git
 └── LICENSE                        # MIT
