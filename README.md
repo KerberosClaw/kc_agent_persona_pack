@@ -126,6 +126,12 @@ This toolkit stores the most personal thing your agent produces — its voice, y
 
 **Disclaimer.** This project is provided "as is", without warranty of any kind (see [LICENSE](LICENSE)). You are solely responsible for what you put into these files and where you push them. The authors accept no liability for leaked, lost, or mishandled data.
 
+## Let the personas talk to each other
+
+This pack is the original mother project of [Agent A2A](https://github.com/KerberosClaw/kc_agent_a2a), a separate MIT technical preview for explicit notes, bounded night conversations and Discord Party. It can return attributed chat summaries to the main persona, then refresh an approved room view after an explicit canonical save. The pack stays the source of identity; the group chat does not grow a competing patch pile.
+
+[The integration guide](docs/A2A.md) explains the baseline/patch mapping and privacy boundary. [Proactive Poke](https://github.com/KerberosClaw/kc_proactive_poke) remains the optional companion for deciding when there is something worth saying. None of these public repos includes a real persona or private chat history.
+
 ## License
 
 MIT
