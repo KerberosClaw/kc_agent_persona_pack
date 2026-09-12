@@ -121,6 +121,12 @@ kc_agent_persona_pack/
 
 **免責聲明。** 本專案以「現狀」提供，不附任何形式擔保（見 [LICENSE](LICENSE)）。你要為放進這些檔的內容、以及推去哪裡負完全責任。對於外洩、遺失或不當處理的資料，作者不負任何責任。
 
+## 讓人格們有地方互相聊天
+
+這份 pack 是 [Agent A2A](https://github.com/KerberosClaw/kc_agent_a2a) 的最初母專案。A2A 是獨立的 MIT 技術預覽版，負責明確委託的紙條、有額度的夜聊，以及 Discord Party；也能把有來源的聊天摘要讀回主人格，等明確存檔後再更新批准的群聊視圖。人格仍以這份 pack 為準，群聊不用另外養一疊互相打架的 patch。
+
+[整合指南](docs/A2A.md) 說明基線、patch 接法與隱私界線。[Proactive Poke](https://github.com/KerberosClaw/kc_proactive_poke) 則繼續負責「現在有沒有話值得主動說」的選用功能。這些公開 repo 都不附帶真實人格或私人聊天紀錄。
+
 ## License
 
 MIT
