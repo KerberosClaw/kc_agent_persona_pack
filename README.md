@@ -2,6 +2,8 @@
 
 [正體中文](README_zh.md)
 
+**Start here:** [Why personas drift, how this pack preserves them, and how it compares with Hermes Agent](docs/PERSONA_DRIFT_AND_HERMES.md) (English summary, Traditional Chinese guide).
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Your AI agent grew a personality. Then you closed the tab and murdered it. Let's fix that.

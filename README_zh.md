@@ -2,6 +2,8 @@
 
 [English](README.md)
 
+**先看這篇**：[人格如何自然浮現、跨 session 延續，以及與 Hermes Agent 的差異](docs/PERSONA_DRIFT_AND_HERMES.md)。附三項研究的中文重點與 Mermaid 圖。
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 你的 AI agent 好不容易長出了個性，然後你一關視窗就把它謀殺了。這套東西就是來救它的。
