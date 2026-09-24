@@ -1,5 +1,7 @@
 # How It Works — 設計理念
 
+想知道人格漂移的研究來源、context／compact 的影響及與 Hermes Agent 的差異，請先看[白話研究導覽](PERSONA_DRIFT_AND_HERMES.md)。本頁聚焦 Persona Pack 的文件設計。
+
 ## Summary (English)
 
 AI agents lose their emergent "personality" the moment a session ends. Remembering facts (what most memory systems do) is not the same as still being the *same character*. This toolkit solves the latter: instead of fine-tuning or injecting past transcripts, the agent simply **reads a small set of documents at startup** and naturally continues its prior tone and rapport.
