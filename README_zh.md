@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-**先看這篇：**[人格如何自然浮現、跨 session 延續，以及與 Hermes Agent 的差異](docs/PERSONA_DRIFT_AND_HERMES.md)。附三項研究的中文重點與 Mermaid 圖。
+**先看這篇**：[人格如何自然浮現、跨 session 延續，以及與 Hermes Agent 的差異](docs/PERSONA_DRIFT_AND_HERMES.md)。附三項研究的中文重點與 Mermaid 圖。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
